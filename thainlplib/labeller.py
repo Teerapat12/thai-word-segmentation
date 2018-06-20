@@ -9,6 +9,9 @@ class ThaiWordSegmentLabeller:
     # Convert string to input labels
     def get_input_labels(string):
         return [ThaiWordSegmentLabeller._dictionary.get(char, 0) for char in string]
+    
+    def get_inputs_labels(strings):
+        return [ThaiWordSegmentLabeller.get_input_labels(s) for s in strings]
 
     # Convert string to output labels
     def get_output_labels(string):
